@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-progress-bar {
+  /* To hide the default progress bar style */
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 20px; /* Set the height of the progress bar */
+  background-color: #f3f3f3; /* Set the background color of the progress bar */
+  border-radius: 20px; /* Optional: Set border radius for rounded corners */
+  height: 10px;
+}
+
+progress[value]::-webkit-progress-value {
+  /* Change the color of the progress bar */
+  background-color: rgb(19, 96, 169);
+  border-radius: 10px;
+}
