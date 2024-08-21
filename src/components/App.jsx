@@ -58,7 +58,7 @@ function App() {
 
   useEffect(() => {
     function fetchQuestions() {
-      fetch("http://localhost:4000/questions")
+      fetch(`${process.env.REACT_APP_API_URL}/questions`)
         .then((res) => res.json())
         .then((data) => dispatch({ type: "ready", payload: data }))
         .catch((err) => console.log(err.message));
