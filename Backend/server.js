@@ -1,19 +1,15 @@
 const express = require("express");
 const data = require("../src/questions.json");
-require("dotenv").config()
+require("dotenv").config();
 
 const app = express();
 const PORT = 4000;
-const apiurl =process.env.
-  
+const apiurl = process.env.REACT_APP_FRONTEND_URL;
 
 const { questions } = data;
 
 app.get("/questions", (req, res) => {
-  res.set(
-    "Access-Control-Allow-Origin",
-    `${apiurl}`
-  );
+  res.set("Access-Control-Allow-Origin", `${apiurl}`);
   res.send(questions);
 });
 
